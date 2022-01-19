@@ -1,8 +1,15 @@
 # CV-traffic-counter
-# WIP
 
 ## About this project
 The goal is to count the number of passing cas through an intersection. To achieve this, I used pytorch, opencv, numpy, and SORT object tracker.
+
+
+## Object design
+Logically separate code to switch parts out easier.
+- Transform
+- Util
+- Counter
+- Model
 
 ## Program flow
 - load video with torchvision.io
@@ -16,8 +23,9 @@ The goal is to count the number of passing cas through an intersection. To achie
 
 ## Limitations
 - video frames must fit in colab RAM space, 1GB video is too big.
+- COCO requirements, min size of 224x224 px
+- Horrible object detection?
 
 ## How to run
-1. run the first cell to install extra dependencies
-2. restart runtime environment
-3. continue after the first cell like normal
+1. cells 1 to 3 set up the environment
+2. 4th cell and below are normal
